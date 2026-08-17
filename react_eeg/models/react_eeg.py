@@ -166,6 +166,7 @@ class REACTEEG(nn.Module):
         trigger = router_out["trigger"]
 
         evidence = router_out["evidence"]
+        mean_reliability = router_out["mean_reliability"]
 
         # ============================================================
         # 3. SNN prediction
@@ -351,6 +352,8 @@ class REACTEEG(nn.Module):
             "channel_reliability": channel_reliability,
 
             "evidence": evidence,
+            "mean_reliability": mean_reliability,
+
 
             "trigger": trigger,
 
@@ -442,6 +445,10 @@ if __name__ == "__main__":
     print()
     print("Evidence:")
     print(out["evidence"])
+
+    print()
+    print("Mean reliability:")
+    print(out["mean_reliability"])
 
     print()
     print("Trigger:")
