@@ -119,7 +119,7 @@ class REACTEEG(nn.Module):
          reliability_weight=0.2,
          trigger_threshold=0.65
         )
-        
+
         # ============================================================
         # SNN classifier
         #
