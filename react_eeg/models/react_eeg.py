@@ -113,8 +113,12 @@ class REACTEEG(nn.Module):
         # Evidence Router
         # ============================================================
 
-        self.router = EvidenceRouter()
-
+        self.router = EvidenceRouter(
+          risk_threshold=0.65,
+          uncertainty_threshold=0.70,
+          reliability_threshold=0.30
+        )
+        
         # ============================================================
         # SNN classifier
         #
